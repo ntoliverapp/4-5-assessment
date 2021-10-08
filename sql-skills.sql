@@ -52,3 +52,17 @@ WHERE total < 5
 ORDER BY total DESC;
 -- Get the total sum of the orders.
 SELECT SUM (total) AS total_orders FROM invoice;
+
+-- JOIN Queries (Various tables)
+-- Get all invoices where the unit_price on the invoice_line is greater than $0.99.
+SELECT * FROM invoice_line
+WHERE unit_price > 0.99;
+-- Get the invoice_date, customer first_name and last_name, and total from all invoices.
+SELECT first_name, last_name, invoice_date, total FROM customer
+JOIN invoice ON invoice.customer_id = customer.customer_id;
+-- Get the customer first_name and last_name and the support rep’s first_name and last_name from all customers. Note that support reps are on the employee table.
+SELECT customer.first_name, customer.last_name, employee.first_name, employee.last_name FROM employee
+JOIN customer ON customer.support_rep_id = employee.employee_id;
+-- Get the album title and the artist name from all albums.
+SELECT title, name FROM album
+JOIN artist ON artist.artist_id = album.artist_id
