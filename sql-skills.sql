@@ -1,5 +1,5 @@
 -- Artist Table
--- Add 3 new artists to the artist table using INSERT. (It’s already created.)
+-- Add 3 new artists to the artist table using INSERT. (It’s already created)
 SELECT * FROM artist;
 INSERT INTO artist
 (name)
