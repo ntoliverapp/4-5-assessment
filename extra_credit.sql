@@ -20,3 +20,10 @@ WHERE name LIKE '%Black%';
 SELECT MAX(birth_date) FROM employee;
 -- Find the birthdate for the oldest employee.
 SELECT MIN(birth_date) FROM employee;
+
+-- Invoice Table
+-- Count how many orders were in CA, TX, or AZ (use IN).
+SELECT COUNT(*) FROM invoice
+WHERE billing_state IN('CA', 'TX', 'AZ');
+-- Get the average total of the orders.
+SELECT AVG (total) FROM invoice;
