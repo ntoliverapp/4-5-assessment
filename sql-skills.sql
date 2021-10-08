@@ -51,3 +51,4 @@ SELECT * FROM invoice
 WHERE total < 5
 ORDER BY total DESC;
 -- Get the total sum of the orders.
+SELECT SUM (total) AS total_orders FROM invoice;
