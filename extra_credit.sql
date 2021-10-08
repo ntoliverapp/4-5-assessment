@@ -32,6 +32,7 @@ SELECT AVG (total) FROM invoice;
 -- Get all playlist_track track_ids where the playlist name is Music.
 SELECT track_id, name FROM playlist_track
 JOIN playlist ON playlist.playlist_id = playlist_track.playlist_id;
+WHERE playlist.name = 'Music'
 -- Get all track names for playlist_id 5.
 SELECT name FROM track
 WHERE track_id IN (
